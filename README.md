@@ -32,27 +32,6 @@ hackster hackathon/
     └── index.html            # Front-end page (Tailwind CSS via CDN)
 ```
 
----
-
-## Changes needed before pushing to GitHub
-
-Your uploaded project folder had a few things that should **not** be committed to GitHub. Here's what to fix:
-
-1. **Remove the `venv/` folder** — this is your local Python virtual environment (hundreds of files). It should never be committed; it's machine-specific and bloats the repo. Instead, commit a `requirements.txt` (included below) so anyone can recreate the environment.
-2. **Remove `__pycache__/` folders and `.pyc` files** — these are compiled Python cache files, auto-generated and unnecessary in version control.
-3. **Remove `tempCodeRunnerFile.python`** — this file contains an unrelated "Password Strength Analyzer" script (looks like leftover code from a different exercise/task, not part of the Health Chatbot). It's not imported or used anywhere in `app.py`/`chatbot.py`, so it can be safely deleted.
-4. **Add a `.gitignore`** (included below) so `venv/`, cache files, and editor junk never get committed in the future.
-5. **Add a `requirements.txt`** (included below) — currently the project has no dependency file, so nobody else can install the correct packages easily.
-6. (Optional but recommended) Fix line endings — the source files use Windows-style `\r\n` line endings. Not a functional problem, but if you plan to collaborate across OSes, consider normalizing to `\n` (most editors/Git can do this automatically via `.gitattributes`).
-
-### Files provided for you
-- `.gitignore` — excludes `venv/`, `__pycache__/`, and the leftover temp file
-- `requirements.txt` — lists `Flask` (the only external dependency actually used)
-- This `README.md`
-
-Copy these into your project's root folder (next to `app.py`), **delete `venv/`, `__pycache__/`, and `tempCodeRunnerFile.python`**, then push to GitHub.
-
----
 
 ## How to run this project
 
